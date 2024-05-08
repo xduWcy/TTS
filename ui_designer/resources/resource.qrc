@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>menu.svg</file>
+    <file>Import.svg</file>
+    <file>poweroff.svg</file>
+    <file>rest.svg</file>
+    <file>close-square.svg</file>
+    <file>file-add (1).svg</file>
+    <file>image.svg</file>
+    <file>bg-colors.svg</file>
+    <file>font-colors.svg</file>
+    <file>font-size.svg</file>
+    <file>setting.svg</file>
+    <file>file done.svg</file>
+    <file>file-add.svg</file>
+    <file>folder-open.svg</file>
+    <file>E-Books.svg</file>
+  </qresource>
+</RCC>
