@@ -148,7 +148,7 @@
      <normaloff>:/icon/file done.svg</normaloff>:/icon/file done.svg</iconset>
    </property>
    <property name="text">
-    <string>打开最近的文件</string>
+    <string>历史文件（书架）</string>
    </property>
   </action>
   <action name="actionreset">
@@ -175,7 +175,7 @@
      <normaloff>:/icon/bg-colors.svg</normaloff>:/icon/bg-colors.svg</iconset>
    </property>
    <property name="text">
-    <string>选择背景颜色</string>
+    <string>选择字体颜色</string>
    </property>
   </action>
   <action name="actioninsertbgpic">
