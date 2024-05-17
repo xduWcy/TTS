@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1284</width>
-    <height>820</height>
+    <height>777</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -70,8 +70,17 @@
      <iconset resource="resources/resource.qrc">
       <normaloff>:/icon/folder-open.svg</normaloff>:/icon/folder-open.svg</iconset>
     </property>
+    <widget class="QMenu" name="filesmenu">
+     <property name="title">
+      <string>历史文件（书架）</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources/resource.qrc">
+       <normaloff>:/icon/file done.svg</normaloff>:/icon/file done.svg</iconset>
+     </property>
+    </widget>
     <addaction name="actionfileopen"/>
-    <addaction name="actionrecentfile"/>
+    <addaction name="filesmenu"/>
    </widget>
    <widget class="QMenu" name="menusettings">
     <property name="title">
@@ -142,15 +151,6 @@
     <string>打开文件</string>
    </property>
   </action>
-  <action name="actionrecentfile">
-   <property name="icon">
-    <iconset resource="resources/resource.qrc">
-     <normaloff>:/icon/file done.svg</normaloff>:/icon/file done.svg</iconset>
-   </property>
-   <property name="text">
-    <string>历史文件（书架）</string>
-   </property>
-  </action>
   <action name="actionreset">
    <property name="icon">
     <iconset resource="resources/resource.qrc">
@@ -203,6 +203,11 @@
    </property>
    <property name="text">
     <string>退出应用</string>
+   </property>
+  </action>
+  <action name="action111">
+   <property name="text">
+    <string>111</string>
    </property>
   </action>
  </widget>

@@ -16,7 +16,13 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
         self.setupUi(self)  # 继承 Ui_MainWindow 界面类
         #加载设置
         self.init_info()
+        #显示上次打开的文件
+        if self.current_file:
+            self.load_file(self.current_file)
+
         self.actionfileopen.triggered.connect(self.open_file)
+
+
 
     ###init_info用于初始化文件设置，保存打开的文件###
     def init_info(self):
@@ -66,6 +72,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
                     txt = f.read()
                     self.textBrowser.setText(txt)
                     self.textBrowser.setStatusTip(self.filename)
+                    self.display_files() #显示最近的文件
 
             except:
                 self.show_msg('文件不存在或读取时发生未知错误！')
@@ -81,6 +88,38 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
     def show_msg(self, msg):
         # 后两项分别为按钮(以|隔开，共有7种按钮类型，见示例后)、默认按钮(省略则默认为第一个按钮)
         reply = QMessageBox.information(self, "提示", msg, QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+
+    #重写closeevent函数
+    def closeEvent(self, event):
+        result = QMessageBox.information(self, "退出应用", "确认退出应用？", QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
+        if result == QMessageBox.Yes:
+            #关闭窗口时保存应用设置
+            self.save_info()    #关闭窗口时保存应用设置
+            event.accept()      #接收事件允许窗口的关闭
+            QMainWindow.closeEvent(self, event)
+        else:
+            event.ignore()      #忽略时间阻止窗口的关闭
+
+    def display_files(self):
+        #显示最近打开的文件
+        #每一次打开重新显示（根据最近使用算法排列）
+        _translate = QtCore.QCoreApplication.translate
+        self.filesmenu.clear()
+        for i, file in enumerate(self.history_files):
+            name = file.split('/')[-1].split('.')[0]     #获取文本文件名
+            action = QtWidgets.QAction(self)
+            action.setObjectName(f'file{i}')
+            
+            self.filesmenu.addAction(action)      #给历史文件添加动作
+            action.setText(_translate("MyMainWindow", name))
+            action.triggered.connect(self.open_history_files)
+
+    def open_history_files(self):
+        sender = self.sender().objectName()
+        self.load_file(self.history_files[int(sender[-1])])
+
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # 在 QApplication 方法中使用，创建应用程序对象
