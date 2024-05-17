@@ -52,13 +52,13 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
                 self.filename = file.split('/')[-1].split('.')[0]  #先将路径按'/'分割并取最后一个元素通常为文件名即'xxx.txt'，再按点分割，取第一个
 
                 #使用最久未使用算法，更新最近打开的文件'history_file'
-                if file in self.last_files:
-                    self.last_files.remove(file)  #先移除队列，在添加元组末尾
-                self.last_files.append(file)
+                if file in self.history_files:
+                    self.history_files.remove(file)  #先移除队列，在添加元组末尾
+                self.history_files.append(file)
 
                 #书架中存储最近打开的十本书
-                if len(self.last_files) > 10:
-                    self.last_files.pop(0)  #弹出最久未使用的书
+                if len(self.history_files) > 10:
+                    self.history_files.pop(0)  #弹出最久未使用的书
 
                 #获取文件的编码格式（由于不知道文件的编码）
                 encoding_format = self.get_encoding_format(file)
@@ -78,6 +78,9 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
         with open(file, 'rb') as f:
             return cchardet.detect(f.read())['encoding']
 
+    def show_msg(self, msg):
+        # 后两项分别为按钮(以|隔开，共有7种按钮类型，见示例后)、默认按钮(省略则默认为第一个按钮)
+        reply = QMessageBox.information(self, "提示", msg, QMessageBox.Yes | QMessageBox.No, QMessageBox.Yes)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # 在 QApplication 方法中使用，创建应用程序对象
