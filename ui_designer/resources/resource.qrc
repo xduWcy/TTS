@@ -1,5 +1,10 @@
 <RCC>
   <qresource prefix="icon">
+    <file>detail.svg</file>
+    <file>vertical right.svg</file>
+    <file>vertical left.svg</file>
+    <file>left-circle.svg</file>
+    <file>right-circle.svg</file>
     <file>menu.svg</file>
     <file>Import.svg</file>
     <file>poweroff.svg</file>

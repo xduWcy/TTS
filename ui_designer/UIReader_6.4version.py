@@ -17,15 +17,13 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
         self.setupUi(self)  # 继承 Ui_MainWindow 界面类
         #加载设置
         self.init_info()
-        self.pushButton.setHidden(True)
-        self.pushButton_2.setHidden(True)
         #显示上次打开的文件
         if self.current_file:
             self.load_file(self.current_file)
 
         self.actionfileopen.triggered.connect(self.open_file)
-        self.pushButton.clicked.connect(self.show_last)
-        self.pushButton_2.clicked.connect(self.show_next)
+
+
 
     ###init_info用于初始化文件设置，保存打开的文件###
     def init_info(self):
@@ -93,6 +91,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
                 self.display_history_files() #显示最近的文件
                 self.setup_chapters()    #设置章节目录
                 self.show_content()      #设置文本显示器txt—browser的内容
+
             except:
                 self.show_msg('文件不存在或读取时发生未知错误！')
 
@@ -145,47 +144,61 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
             item = QTreeWidgetItem(self.treeWidget)
             item.setText(0, _translate("MyMainWindow", list(value.keys())[0]))
             self.treeWidget.addTopLevelItem(item)                     #将新创建的树节点作为顶级项
+
         self.treeWidget.setSortingEnabled(__sortingEnable)
         self.treeWidget.clicked.connect(self.onTreeClicked)
         self.treeWidget.setCurrentItem(self.treeWidget.topLevelItem(self.chapter), 0)
         # 为当前章节设置背景色
-        #self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
+        self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
+
+    #设置章节目录
+    # def setup_chapters(self):
+    #     # 每次绘制目录时先清除一下
+    #     self.treeWidget.clear()
+    #     _translate = QtCore.QCoreApplication.translate
+    #     __sortingEnabled = self.treeWidget.isSortingEnabled()
+    #     for i, value in enumerate(self.chapters):
+    #         item = QTreeWidgetItem(self.treeWidget)
+    #         item.setText(0, _translate("MyMainWindow", list(value.keys())[0]))
+    #         self.treeWidget.addTopLevelItem(item)
+    #         # print(self.treeWidget.topLevelItem(i))
+    #         # self.treeWidget.topLevelItem(i).setText(0, _translate("MyMainWindow", value.keys()[0]))
+    #     self.treeWidget.setSortingEnabled(__sortingEnabled)
+    #     self.treeWidget.clicked.connect(self.onTreeClicked)
+    #     self.treeWidget.setCurrentItem(self.treeWidget.topLevelItem(self.chapter),0)
+    #     # 为当前章节设置背景色
+    #     self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15,136,235))
+
+
+    # def onTreeClicked(self, index):
+    #     # 恢复原来章节的背景色(设置透明度为0)，为新章节设置背景色
+    #     self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(0, 0, 0, 0))
+    #     # 获取点击的项目下标
+    #     self.chapter = int(index.row())
+    #     self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
+    #     # 显示内容
+    #     self.show_content()
 
     # 点击目录跳转到章节
     def onTreeClicked(self, index):
         # 恢复原来章节的背景色(设置透明度为0)，为新章节设置背景色
-
-        top_level_item = self.treeWidget.topLevelItem(self.chapter)
-        if top_level_item is not None:
-            top_level_item.setBackground(0, QColor(0, 0, 0, 0))
-        else:
-            self.chapter = 0
-            top_level_item = self.treeWidget.topLevelItem(self.chapter)
-            top_level_item.setBackground(0, QColor(0, 0, 0, 0))
-            print(f"No top-level item at index {self.chapter}")
         self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(0, 0, 0, 0))
         # 获取点击的项目下标
         self.chapter = int(index.row())
         # 判断按钮是否要显示
-        self.button()
+        #self.show_button()
         self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
         self.show_content()
 
 
     def show_content(self):
-        self.button()
         self.textBrowser.setText(self.get_content())            #将文本内容加入到文本浏览器
-        #self.textBrowser.setStatusTip(self.filename + "   " + list(self.chapters[self.chapter].keys())[0])    # 状态栏显示当前的章节内容和目录名
+        self.textBrowser.setStatusTip(self.filename + "   " + list(self.chapters[self.chapter].keys())[0])    # 状态栏显示当前的章节内容和目录名
 
         # 获取章节内容
     def get_content(self):
-        #index = self.chapter
+        index = self.chapter
         # 起始行
-        if self.chapter > len(self.chapters) and self.chapter != 0:
-            index = 0
-        else:
-            index = self.chapter
-
         start = list(self.chapters[index].values())[0]
         # 如果是终章
         if index == self.treeWidget.topLevelItemCount() - 1:
@@ -195,36 +208,7 @@ class MyMainWindow(QMainWindow, Ui_MainWindow): # 继承 QMainWindow 类和 Ui_M
             end = list(self.chapters[index + 1].values())[0]
             return "".join(self.lines[start:end])
 
-    def show_last(self):
-        self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(0, 0, 0, 0))
-        self.chapter = self.chapter - 1
-        self.show_content()  # 显示内容
-        self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
 
-    def show_next(self):
-        self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(0, 0, 0, 0))
-        self.chapter = self.chapter + 1
-        self.show_content()  # 显示内容
-        self.treeWidget.topLevelItem(self.chapter).setBackground(0, QColor(15, 136, 235))
-
-    def button(self):
-        if len(self.chapters) == 1:
-            self.pushButton.setHidden(True)
-            self.pushButton_2.setHidden(True)
-            # 第一章
-        elif self.chapter == 0:
-            self.pushButton.setHidden(True)
-            self.pushButton_2.setVisible(True)
-            # 末章
-        elif self.chapter == len(self.chapters) - 1:
-            self.pushButton.setVisible(True)
-            self.pushButton_2.setHidden(True)
-            # 其他情况，恢复按钮
-        else:
-            if self.pushButton.isHidden():
-                self.pushButton.setVisible(True)
-            if self.pushButton_2.isHidden():
-                self.pushButton_2.setVisible(True)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # 在 QApplication 方法中使用，创建应用程序对象
