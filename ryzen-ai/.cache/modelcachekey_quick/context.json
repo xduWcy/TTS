@@ -1,0 +1,341 @@
+{
+ "config": {
+  "passes": [
+   {
+    "name": "init",
+    "plugin": "vaip-pass_init"
+   },
+   {
+    "name": "fuse_resize_norm",
+    "plugin": "vaip-pass_py_ext",
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_resize_norm",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_softmax",
+    "plugin": "vaip-pass_py_ext",
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_softmax",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_topk",
+    "plugin": "vaip-pass_py_ext",
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_topk",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_decode_filter_boxes",
+    "plugin": "vaip-pass_py_ext",
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_decode_filter_boxes",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_NMS",
+    "plugin": "vaip-pass_py_ext",
+    "disabled": true,
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_NMS",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_DPU",
+    "plugin": "vaip-pass_level1_dpu",
+    "passDpuParam": {
+     "subPass": [
+      {
+       "name": "convert_ending_blacklist_ops_to_unknown_op",
+       "plugin": "vaip-pass_convert_ending_blacklist_ops_to_unknown_op"
+      },
+      {
+       "name": "manual_partition",
+       "plugin": "vaip-pass_manual_partition",
+       "disabled": true,
+       "manualPartition": {
+        "fromOps": [
+         "1745/duplicated_token_14",
+         "1764/duplicated_token_10",
+         "1783/duplicated_token_6",
+         "1802/duplicated_token_2"
+        ],
+        "toOps": [
+         "2895"
+        ]
+       }
+      },
+      {
+       "name": "dynamic_input_batch",
+       "plugin": "vaip-pass_dynamic_input_batch"
+      },
+      {
+       "name": "convert_qlinear_to_qdq",
+       "plugin": "vaip-pass_py_ext",
+       "enableGc": true,
+       "disabled": true,
+       "pyExt": {
+        "moduleName": "voe.passes.convert_qlinear_to_qdq",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "create_const_op",
+       "plugin": "vaip-pass_create_const_op"
+      },
+      {
+       "name": "convert_to_xir_op",
+       "plugin": "vaip-pass_py_ext",
+       "pyExt": {
+        "moduleName": "voe.passes.convert_to_xir_op",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "to_xir",
+       "plugin": "vaip-pass_to_xir_ops"
+      },
+      {
+       "name": "remove_extra_q_dq",
+       "plugin": "vaip-pass_remove_extra_q_dq"
+      },
+      {
+       "name": "merge_add_into_conv_bias",
+       "plugin": "vaip-pass_merge_add_into_conv_bias"
+      },
+      {
+       "name": "merge_fix",
+       "plugin": "vaip-pass_py_ext",
+       "enableGc": true,
+       "pyExt": {
+        "moduleName": "voe.passes.merge_fix",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "layoutransform",
+       "plugin": "vaip-pass_layout_transform_via_adding_transpose"
+      },
+      {
+       "name": "gc_after_layout_transform",
+       "plugin": "vaip-pass_remove_isolated_node"
+      },
+      {
+       "name": "fuse_transpose",
+       "plugin": "vaip-pass_fuse_transpose",
+       "enableGc": true
+      },
+      {
+       "name": "gc_after_fuse_transpose",
+       "plugin": "vaip-pass_remove_isolated_node"
+      },
+      {
+       "name": "remove_identity",
+       "plugin": "vaip-pass_remove_identity",
+       "logVerbosity": 1
+      },
+      {
+       "name": "add_fix_after_const",
+       "plugin": "vaip-pass_const_add_fix"
+      },
+      {
+       "name": "merge_duplicated_fix",
+       "plugin": "vaip-pass_merge_duplicated_fix",
+       "enableGc": true,
+       "disabled": true
+      },
+      {
+       "name": "remove_reshape_fix",
+       "plugin": "vaip-pass_py_ext",
+       "pyExt": {
+        "moduleName": "voe.passes.remove_reshape_fix",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "const_fold_batchnorm_to_scale",
+       "plugin": "vaip-pass_py_ext",
+       "pyExt": {
+        "moduleName": "voe.passes.const_fold_batchnorm_to_scale",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "const_fold_transpose",
+       "plugin": "vaip-pass_const_fold_transpose"
+      },
+      {
+       "name": "merge_pad",
+       "plugin": "vaip-pass_merge_pad"
+      },
+      {
+       "name": "merge_hard_sigmoid",
+       "plugin": "vaip-pass_merge_hard_sigmoid"
+      },
+      {
+       "name": "merge_mul",
+       "plugin": "vaip-pass_py_ext",
+       "pyExt": {
+        "moduleName": "voe.passes.merge_mul",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "merge_consecutive_fix",
+       "plugin": "vaip-pass_merge_consecutive_fix",
+       "enableLog": true,
+       "logVerbosity": 1,
+       "disabled": true
+      },
+      {
+       "name": "graph_output_add_node",
+       "plugin": "vaip-pass_graph_output_add_node",
+       "disabled": true
+      },
+      {
+       "name": "convert_transpose_add_fix_input_fix_input",
+       "plugin": "vaip-pass_py_ext",
+       "disabled": true,
+       "pyExt": {
+        "moduleName": "voe.passes.convert_transpose_add_fix_input_fix_input",
+        "methodName": "process"
+       }
+      },
+      {
+       "name": "convert_transpose_fix_pad_fix_input",
+       "plugin": "vaip-pass_py_ext",
+       "disabled": true,
+       "pyExt": {
+        "moduleName": "voe.passes.convert_transpose_fix_pad_fix_input",
+        "methodName": "process"
+       }
+      },
+      {
+       "name": "convert_transpose_fix_input",
+       "plugin": "vaip-pass_py_ext",
+       "enableGc": true,
+       "disabled": true,
+       "pyExt": {
+        "moduleName": "voe.passes.convert_transpose_fix_input",
+        "methodName": "process"
+       }
+      },
+      {
+       "name": "convert_softmax_to_hard_softmax",
+       "plugin": "vaip-pass_py_ext",
+       "disabled": true,
+       "pyExt": {
+        "moduleName": "voe.passes.convert_softmax_to_hard_softmax",
+        "methodName": "rules"
+       }
+      },
+      {
+       "name": "remove_top_transpose",
+       "plugin": "vaip-pass_merge_input_transpose",
+       "enableGc": true,
+       "disabled": true
+      },
+      {
+       "name": "remove_bottom_transpose",
+       "plugin": "vaip-pass_remove_bottom_transpose",
+       "enableGc": true,
+       "disabled": true
+      },
+      {
+       "name": "final_gc",
+       "plugin": "vaip-pass_remove_isolated_node"
+      }
+     ],
+     "xcompilerAttrs": {
+      "debug_mode": {
+       "stringValue": "performance"
+      },
+      "preassign": {
+       "boolValue": false
+      },
+      "disable_std_quant": {
+       "boolValue": false
+      },
+      "prefetch": {
+       "boolValue": false
+      },
+      "dump_subgraph_ops": {
+       "boolValue": false
+      },
+      "concat_skip_code_gen": {
+       "boolValue": false
+      },
+      "opt_level": {
+       "intValue": 0
+      },
+      "dpu_subgraph_num": {
+       "intValue": 32
+      },
+      "profile": {
+       "intValue": 0
+      }
+     },
+     "minimumNumOfConv": 2
+    }
+   }
+  ],
+  "cacheDir": "./vitis/.cache",
+  "cacheKey": "modelcachekey_quick",
+  "version": {
+   "versionInfos": [
+    {
+     "packageName": "vaip",
+     "commit": "1ceff64122082fdd5005f1bf81c8cafea30a1f0e",
+     "version": "vaip.1.0.0"
+    },
+    {
+     "packageName": "target_factory",
+     "commit": "2a29c4509074d1ac8cdae627150fa9f6cb18d36f",
+     "version": "target-factory.3.5.0"
+    },
+    {
+     "packageName": "vart",
+     "commit": "7b44d3c12ac1e0f018d169dc593745ea22e1eda0",
+     "version": "vart"
+    },
+    {
+     "packageName": "xcompiler",
+     "commit": "0d23b257c519cac2cc70c5cbc0ece610c74c4308",
+     "version": "xcompiler.3.5.0"
+    },
+    {
+     "packageName": "onnxrutnime",
+     "commit": "baeece44ba075009c6bfe95891a8c1b3d4571cb3",
+     "version": "onnxruntime.1.15.1"
+    },
+    {
+     "packageName": "xir",
+     "commit": "5885e222d99604084b39e54f6123df01d12c5f7e",
+     "version": "xir.3.5.0"
+    },
+    {
+     "packageName": "xrt",
+     "commit": "a4d3aba39d68550c537a7e7b258d08351f794374",
+     "version": "xrt.2.17.0"
+    },
+    {
+     "packageName": "graph_engine",
+     "commit": "d42034adbc8854cdbd6dc755df5dbe887788c48c",
+     "version": "graph_engine"
+    }
+   ]
+  },
+  "onnxPath": ".\\onnx\\test3_quant\\cnhubert.onnx",
+  "sessionOptions": {
+   "cacheKey": "modelcachekey_quick",
+   "config_file": "./vitis/vaip_config.json",
+   "cacheDir": "./vitis/.cache"
+  }
+ }
+}

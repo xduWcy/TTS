@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>E-reader</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources/resource.qrc">
+    <normaloff>:/icon/E-Books.svg</normaloff>:/icon/E-Books.svg</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" alignment="Qt::AlignLeft">
+       <widget class="QTreeWidget" name="treeWidget">
+        <column>
+         <property name="text">
+          <string>章节列表</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resources/resource.qrc">
+           <normaloff>:/icon/menu.svg</normaloff>:/icon/menu.svg</iconset>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QTextBrowser" name="textBrowser"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item alignment="Qt::AlignLeft">
+       <widget class="QPushButton" name="pushButton">
+        <property name="text">
+         <string>上一章节</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources/resource.qrc">
+          <normaloff>:/icon/vertical right.svg</normaloff>:/icon/vertical right.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignLeft">
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string>下一章节</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources/resource.qrc">
+          <normaloff>:/icon/vertical left.svg</normaloff>:/icon/vertical left.svg</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources/resource.qrc">
+      <normaloff>:/icon/folder-open.svg</normaloff>:/icon/folder-open.svg</iconset>
+    </property>
+    <widget class="QMenu" name="filesmenu">
+     <property name="title">
+      <string>历史文件（书架）</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources/resource.qrc">
+       <normaloff>:/icon/file done.svg</normaloff>:/icon/file done.svg</iconset>
+     </property>
+    </widget>
+    <addaction name="actionfileopen"/>
+    <addaction name="filesmenu"/>
+   </widget>
+   <widget class="QMenu" name="menusettings">
+    <property name="title">
+     <string>settings</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources/resource.qrc">
+      <normaloff>:/icon/setting.svg</normaloff>:/icon/setting.svg</iconset>
+    </property>
+    <widget class="QMenu" name="menuwordandcolor">
+     <property name="title">
+      <string>字体和颜色</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources/resource.qrc">
+       <normaloff>:/icon/font-colors.svg</normaloff>:/icon/font-colors.svg</iconset>
+     </property>
+     <addaction name="actionchoosetype"/>
+     <addaction name="actionbgcolor"/>
+    </widget>
+    <widget class="QMenu" name="menubackgroundpicture">
+     <property name="title">
+      <string>背景图片</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources/resource.qrc">
+       <normaloff>:/icon/image.svg</normaloff>:/icon/image.svg</iconset>
+     </property>
+     <addaction name="actioninsertbgpic"/>
+     <addaction name="actioncolosebgpicture"/>
+    </widget>
+    <addaction name="menuwordandcolor"/>
+    <addaction name="menubackgroundpicture"/>
+    <addaction name="actionhidemenu"/>
+    <addaction name="actionreset"/>
+   </widget>
+   <widget class="QMenu" name="menuexit">
+    <property name="title">
+     <string>exit</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resources/resource.qrc">
+      <normaloff>:/icon/poweroff.svg</normaloff>:/icon/poweroff.svg</iconset>
+    </property>
+    <addaction name="actionquit"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menusettings"/>
+   <addaction name="menuexit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>27</width>
+     <height>27</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>RightToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionread_books"/>
+  </widget>
+  <action name="actionfileopen">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/file-add.svg</normaloff>:/icon/file-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionreset">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/rest.svg</normaloff>:/icon/rest.svg</iconset>
+   </property>
+   <property name="text">
+    <string>恢复默认设置</string>
+   </property>
+  </action>
+  <action name="actionchoosetype">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/font-size.svg</normaloff>:/icon/font-size.svg</iconset>
+   </property>
+   <property name="text">
+    <string>选择字体</string>
+   </property>
+  </action>
+  <action name="actionfontcolor">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/bg-colors.svg</normaloff>:/icon/bg-colors.svg</iconset>
+   </property>
+   <property name="text">
+    <string>选择字体颜色</string>
+   </property>
+  </action>
+  <action name="actioninsertbgpic">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/Import.svg</normaloff>:/icon/Import.svg</iconset>
+   </property>
+   <property name="text">
+    <string>导入背景图片</string>
+   </property>
+  </action>
+  <action name="actioncolosebgpicture">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/close-square.svg</normaloff>:/icon/close-square.svg</iconset>
+   </property>
+   <property name="text">
+    <string>关闭背景图片</string>
+   </property>
+  </action>
+  <action name="actionquit">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/poweroff.svg</normaloff>:/icon/poweroff.svg</iconset>
+   </property>
+   <property name="text">
+    <string>退出应用</string>
+   </property>
+  </action>
+  <action name="action111">
+   <property name="text">
+    <string>111</string>
+   </property>
+  </action>
+  <action name="actionbgcolor">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/bg-colors.svg</normaloff>:/icon/bg-colors.svg</iconset>
+   </property>
+   <property name="text">
+    <string>颜色设置</string>
+   </property>
+  </action>
+  <action name="actionhidemenu">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/hide menu.svg</normaloff>:/icon/hide menu.svg</iconset>
+   </property>
+   <property name="text">
+    <string>隐藏/打开目录</string>
+   </property>
+  </action>
+  <action name="actionreading">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/ear.svg</normaloff>:/icon/ear.svg</iconset>
+   </property>
+   <property name="text">
+    <string>听书</string>
+   </property>
+  </action>
+  <action name="actionread_books">
+   <property name="icon">
+    <iconset resource="resources/resource.qrc">
+     <normaloff>:/icon/customerservice.svg</normaloff>:/icon/customerservice.svg</iconset>
+   </property>
+   <property name="text">
+    <string>audiobook</string>
+   </property>
+   <property name="toolTip">
+    <string>audiobook</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources/resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionquit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
