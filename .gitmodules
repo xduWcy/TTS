@@ -1,6 +1,0 @@
-[submodule "gpt_sovits"]
-	path = gpt_sovits
-	url = https://github.com/RVC-Boss/GPT-SoVITS.git
-[submodule "Service150"]
-	path = Service150
-	url = https://www.modelscope.cn/datasets/DatatangBeijing/150People-ChineseMandarinAverageToneSpeechSynthesisCorpus-CustomerService.git
