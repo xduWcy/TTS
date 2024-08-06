@@ -1,0 +1,6 @@
+122243	您现在#1操作#3，我#1指导您#1进行#1下一步#4。
+	nin2 xian4 zai4 cao1 zuo4 wo2 zhi2 dao3 nin2 jin4 xing2 xia4 yi2 bu4
+122449	我们#1从六点钟#1开始#1扣款#3，您#1六点钟#1之前#1就#1转进去了吗#4？
+	wo3 men5 cong2 liu4 dian3 zhong1 kai1 shi3 kou4 kuan3 nin2 liu4 dian3 zhong1 zhi1 qian2 jiu4 zhuan3 jin4 qu5 le5 ma5
+122161	浙江#1这边#3，现在#2所有的#1储值卡#2都#1被降成了#1地方卡#4。
+	zhe4 jiang1 zhei4 bian1 xian4 zai4 suo2 you3 de5 chu3 zhi2 ka3 dou1 bei4 jiang4 cheng2 le5 di4 fang1 ka3

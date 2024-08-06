@@ -1,0 +1,6 @@
+049057	您需要#1提供#1您的#1订单#1编号#2以及#1手机#1号码#4。
+	nin2 xu1 yao4 ti2 gong1 nin2 de5 ding4 dan1 bian1 hao4 yi3 ji2 shou3 ji1 hao4 ma3
+049594	导致#1扣款#1不成功#3，这个#1之前#2咱们#1已经#1下发#1通知了#4。
+	dao3 zhi4 kou4 kuan3 bu4 cheng2 gong1 zhei4 ge5 zhi1 qian2 zan2 men5 yi3 jing1 xia4 fa1 tong1 zhi1 le5
+049580	今天的#1是吗#3，银行卡#1是#1什么#1时间#2存入的#1余额#4？
+	jin1 tian1 de5 shi4 ma5 yin2 hang2 ka3 shi4 shen2 me5 shi2 jian1 cun2 ru4 de5 yu2 e2

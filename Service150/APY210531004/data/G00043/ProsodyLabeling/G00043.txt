@@ -1,0 +1,6 @@
+043573	您要#1办理#1哪里的#3，重庆的#1还是#1浙江的#4？
+	nin2 yao4 ban4 li3 na2 li3 de5 chong2 qing4 de5 hai2 shi4 zhe4 jiang1 de5
+043033	晚上#1八点#1四十#1起飞#3，二十二点#1十五#1降落#3，就是#1晚上的#1十点#1十五#1降落#4。
+	wan3 shang4 ba1 dian3 si4 shi2 qi3 fei1 er4 shi2 er4 dian3 shi2 wu3 jiang4 luo4 jiu4 shi4 wan3 shang5 de5 shi2 dian3 shi2 wu3 jiang4 luo4
+043450	浙通卡哈#3，稍等#3，我帮您#1看一下#1有没有#1发起#1扣款#4。
+	zhe4 tong1 ka3 ha5 shao1 deng3 wo3 bang1 nin2 kan4 yi2 xia4 you3 mei2 you3 fa1 qi3 kou4 kuan3

@@ -1,0 +1,6 @@
+093404	款项#1充足吗#3，如果#1充足#2可以#1直接#1帮您#1备注#1扣款#4。
+	kuan3 xiang4 chong1 zu2 ma5 ru2 guo3 chong1 zu2 ke2 yi3 zhi2 jie1 bang1 nin2 bei4 zhu4 kou4 kuan3
+093400	我刚才#1给您#1打过电话#3，您#1还记得吗#4？
+	wo3 gang1 cai2 gei3 nin2 da3 guo4 dian4 hua4 nin2 hai2 ji4 de5 ma5
+093619	您#1每跑#1二百块钱#1就#1能省出#1十块来#4。
+	nin2 mei2 pao3 er4 bai3 kuai4 qian2 jiu4 neng2 sheng3 chu1 shi2 kuai4 lai2

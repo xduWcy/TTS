@@ -1,0 +1,6 @@
+007595	您先#1说一下#1号码#3，我这边#1给您#1看一下#4。
+	nin2 xian1 shuo1 yi2 xia4 hao4 ma3 wo3 zhei4 bian1 gei3 nin2 kan4 yi2 xia4
+007440	嗯#1对#3，最晚#1五个#1工作日#1给您#1发过去#4。
+	en4 dui4 zui4 wan2 wu3 ge5 gong1 zuo4 ri4 gei3 nin2 fa1 guo4 qu5
+007428	取消的话#1都是#1头日#1申请#3，次日#1生效的啊#4。
+	qu3 xiao1 de5 hua4 dou1 shi4 tou2 ri4 shen1 qing3 ci4 ri4 sheng1 xiao4 de5 a5

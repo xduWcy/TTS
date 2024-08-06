@@ -1,0 +1,6 @@
+005493	语音#1提示#1暂时#1是#1不能#1查的#4。
+	yu3 yin1 ti2 shi4 zan4 shi2 shi4 bu4 neng2 cha2 de5
+005540	抱歉#3，先生#3，咱这边#1过不了户#4。
+	bao4 qian4 xian1 sheng5 zan2 zhe4 bian1 guo4 bu5 liao3 hu4
+005273	咱们#1这个#1是没有#1短信#1提示的#4。
+	zan2 men5 zhe4 ge5 shi4 mei2 you2 duan3 xin4 ti2 shi4 de5

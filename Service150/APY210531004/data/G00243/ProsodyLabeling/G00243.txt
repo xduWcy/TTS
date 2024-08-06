@@ -1,0 +1,6 @@
+243013	这两个#1订单#1帮您#1备注上#3，尽快#1给您#1处理#4。
+	zhe4 liang3 ge5 ding4 dan1 bang1 nin2 bei4 zhu4 shang5 jin3 kuai4 gei3 nin2 chu2 li3
+243110	您是说#1这个#1单子#1太少#1是吗#4？
+	nin2 shi4 shuo1 zhe4 ge5 dan1 zi5 tai4 shao3 shi4 ma5
+243205	滴滴#1是支持的#3，我们#1暂时#1不支持#1发信息#4。
+	di1 di1 shi4 zhi1 chi2 de5 wo3 men5 zan4 shi2 bu4 zhi1 chi2 fa1 xin4 xi1

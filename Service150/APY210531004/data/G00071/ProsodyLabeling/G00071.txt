@@ -1,0 +1,6 @@
+071348	当天#1时间的#1往返#1价格#3，都比较高#4。
+	dang1 tian1 shi2 jian1 de5 wang2 fan3 jia4 ge2 dou1 bi3 jiao4 gao1
+071284	女士#1请稍等#3，你可以#1先记录#1一下#1他的#1联系#1方式#4。
+	nv3 shi4 qing3 shao1 deng3 ni3 ke2 yi3 xian1 ji4 lu4 yi2 xia4 ta1 de5 lian2 xi5 fang1 shi4
+071314	我看了#3，有一个#1七点#1五十五的#1那趟#4。
+	wo3 kan4 le5 you3 yi2 ge5 qi1 dian2 wu3 shi2 wu3 de5 na4 tang4

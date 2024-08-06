@@ -1,0 +1,6 @@
+085374	您想#1把账单日#2往后拖#1多长#1时间#4？
+	nin2 xiang2 ba3 zhang4 dan1 ri4 wang3 hou4 tuo1 duo1 chang2 shi2 jian1
+085049	我们#1这边#1是#1一个月#1三千#2到#1六千二#1左右#3，先生#4。
+	wo3 men5 zhe4 bian1 shi4 yi2 ge4 yue4 san1 qian1 dao4 liu4 qian1 er4 zuo3 you4 xian1 sheng5
+085488	十二点#1十五分#1起飞#3，十七点#1三十五分#2到达#1大连的#4。
+	shi2 er4 dian3 shi2 wu3 fen1 qi3 fei1 shi2 qi1 dian3 san1 shi2 wu3 fen1 dao4 da2 da4 lian2 de5

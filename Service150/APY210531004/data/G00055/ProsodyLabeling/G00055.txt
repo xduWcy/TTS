@@ -1,0 +1,6 @@
+055275	点击#1还款的话#1提示您#1什么#4？
+	dian3 ji1 huan2 kuan3 de5 hua4 ti2 shi4 nin2 shen2 me5
+055365	这一共#1就#1这一辆车#1对吧#4？
+	zhe4 yi2 gong4 jiu4 zhe4 yi2 liang4 che1 dui4 ba5
+055335	您是#1上传的#1他的#1身份证#1是吧#4？
+	nin2 shi4 shang4 chuan2 de5 ta1 de5 shen1 fen4 zheng4 shi4 ba5

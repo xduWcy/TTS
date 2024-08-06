@@ -1,0 +1,6 @@
+244323	您看#1这个#1屏幕上#3，有没有#1一个#1锁的#1标志#4？
+	nin2 kan4 zhe4 ge5 ping2 mu4 shang5 you3 mei2 you3 yi2 ge5 suo3 de5 biao1 zhi4
+244366	咱这个#1大屏#1开不了#3，已经#1排除了#1电源#1问题吗#4？
+	zan2 zhe4 ge5 da4 ping2 kai1 bu4 liao3 yi3 jing1 pai2 chu2 le5 dian4 yuan2 wen4 ti2 ma5
+244454	设备的#1左上角#1或右下角#3，贴着个#1白色#1小条#3，您#1找一下#4。
+	she4 bei5 de5 zuo3 shang4 jiao3 huo4 you4 xia4 jiao3 tie1 zhe5 ge5 bai2 se4 xiao3 tiao2 nin2 zhao3 yi2 xia4

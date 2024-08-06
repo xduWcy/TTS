@@ -1,0 +1,6 @@
+242460	如果#1是的话#3，您可以#1将车#1直接#1锁上#4。
+	ru2 guo3 shi4 de5 hua4 nin2 ke2 yi3 jiang1 che1 zhi2 jie1 suo3 shang4
+242148	您在#1停车前#3，把页面#1地图#1刷新#3，并且#1缩小#1一下#4。
+	nin2 zai4 ting2 che1 qian2 ba3 ye4 mian4 di4 tu2 shua1 xin1 bing4 qie3 suo1 xiao3 yi2 xia4
+242391	不会#1扣除#1多余的#1费用#3，都是#1系统#1自动扣的#4。
+	bu2 hui4 kou4 chu2 duo1 yu2 de5 fei4 yong5 dou1 shi4 xi4 tong3 zi4 dong4 kou4 de5

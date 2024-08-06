@@ -1,0 +1,6 @@
+070677	这是#1您#1会员卡里#3，是抵扣了#1五十元#1之后的#1价位#3，女士#4。
+	zhe4 shi4 nin2 hui4 yuan2 ka2 li3 shi4 di3 kou4 le5 wu3 shi2 yuan2 zhi1 hou4 de5 jia4 wei4 nv3 shi4
+070163	您的#1银行卡#1不能#1扣款#3，对吧#4？
+	nin2 de5 yin2 hang2 ka3 bu4 neng2 kou4 kuan3 dui4 ba5
+070406	十四点#1三十五分#1起飞#3，十六点#1十分#1降落#3，对吧#4？
+	shi2 si4 dian3 san1 shi2 wu3 fen1 qi3 fei1 shi2 liu4 dian3 shi2 fen1 jiang4 luo4 dui4 ba5

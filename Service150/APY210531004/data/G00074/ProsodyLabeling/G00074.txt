@@ -1,0 +1,6 @@
+074432	您好#1先生#3，请问#1您#1还在吗#4？
+	nin2 hao3 xian1 sheng5 qing3 wen4 nin2 hai2 zai4 ma5
+074292	抵扣了#1之后#3，您需要#1支付的是#1一千#1一百元#4。
+	di3 kou4 le5 zhi1 hou4 nin2 xu1 yao4 zhi1 fu4 de5 shi4 yi4 qian1 yi1 bai3 yuan2
+074091	全额#1还清#1以后#3，您就#1可以#1再借了#4。
+	quan2 e2 huan2 qing1 yi3 hou4 nin2 jiu4 ke2 yi3 zai4 jie4 le5

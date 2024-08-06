@@ -1,0 +1,6 @@
+107507	已经#1添加上#1银行卡了#3，是吗#4？
+	yi3 jing1 tian1 jia1 shang4 yin2 hang2 ka3 le5 shi4 ma5
+107619	您是#1在速贷#1里边#1点击的吗#4？
+	nin2 shi4 zai4 su4 dai4 li3 bian1 dian3 ji1 de5 ma5
+107568	这边#1我给您#1反馈#1一下#1这个#1问题#1好吧#4？
+	zhe4 bian1 wo2 gei3 nin2 fan3 kui4 yi2 xia4 zhe4 ge5 wen4 ti2 hao3 ba5

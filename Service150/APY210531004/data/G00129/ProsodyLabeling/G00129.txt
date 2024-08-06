@@ -1,0 +1,6 @@
+129224	您#1是不是#1没时间#1看盘#3，所以#1不敢做呢#4？
+	nin2 shi4 bu2 shi4 mei2 shi2 jian1 kan4 pan2 suo2 yi3 bu4 gan3 zuo4 ne5
+129560	系统#1显示#3，您是#1昨天的#1还款日吗#4？
+	xi4 tong2 xian3 shi4 nin2 shi4 zuo2 tian1 de5 huan2 kuan3 ri4 ma5
+129350	或者#1给您#1申请#1鲁通的#1记账卡#1也可以#4。
+	huo4 zhe2 gei3 nin2 shen1 qing2 lu3 tong1 de5 ji4 zhang4 ka2 ye3 ke2 yi3

@@ -1,0 +1,6 @@
+119101	您长按#1其中的#1节能键#3，三到#1五秒#1可以吗#4？
+	nin2 chang2 an4 qi2 zhong1 de5 jie2 neng2 jian4 san1 dao4 wu2 miao3 ke2 yi3 ma5
+119139	魏女士#3，有什么事#1给我#1打电话#1就行了#4。
+	wei4 nv3 shi4 you3 shen2 me5 shi4 gei3 wo2 da3 dian4 hua4 jiu4 xing2 le5
+119253	大家#1都是#1免费#1下发卡的#3，都一样#4。
+	da4 jia1 dou1 shi4 mian3 fei4 xia4 fa1 ka3 de5 dou1 yi2 yang4

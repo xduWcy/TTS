@@ -1,0 +1,6 @@
+066603	您刚刚#1来过#1电话#3，断线了#3，您的#1订单号#1跟我#1说一下#4。
+	nin2 gang1 gang1 lai2 guo4 dian4 hua4 duan4 xian4 le5 nin2 de5 ding4 dan1 hao4 gen1 wo3 shuo1 yi2 xia4
+066107	您就#1尽量#1别再#1往里#1充了#3，可以#1换卡了#4。
+	nin2 jiu4 jin3 liang4 bie2 zai4 wang2 li3 chong1 le5 ke2 yi3 huan4 ka3 le5
+066269	昨天#1扣款#1三次#1都是#1余额#1不足的#4。
+	zuo2 tian1 kou4 kuan3 san1 ci4 dou1 shi4 yu2 e2 bu4 zu2 de5
