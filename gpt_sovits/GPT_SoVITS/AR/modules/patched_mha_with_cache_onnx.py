@@ -55,8 +55,8 @@ def multi_head_attention_forward_patched(
         cache["k"][cache["stage"]] = k
         cache["v"][cache["stage"]] = v
     else:
-        cache["k"][cache["stage"]] = torch.cat([cache["k"][cache["stage"]][:-1], k], 0)
-        cache["v"][cache["stage"]] = torch.cat([cache["v"][cache["stage"]][:-1], v], 0)
+        cache["k"][cache["stage"]] = torch.cat([cache["k"][cache["stage"]], k], 0)
+        cache["v"][cache["stage"]] = torch.cat([cache["v"][cache["stage"]], v], 0)
         k = cache["k"][cache["stage"]]
         v = cache["v"][cache["stage"]]
     cache["stage"] = (cache["stage"] + 1) % cache["all_stage"]

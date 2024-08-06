@@ -47,17 +47,24 @@ class TTSEngine():
                 "device":"npu",
                 "cache_path":f"{DIR_NAME}/tmp",
                 "config_path":f"{DIR_NAME}/ryzen-ai/vaip_config.json",
-                "clean_cache":True
+                "clean_cache":True,
+                "model_name":"decoder"
             }
         else:
             raise NotImplementedError("Not supported device")
-        self.gpt_sovits = GPTSoVITSONNX(DIR_NAME + "/cache/onnx/gsv_2", **npu_kwargs)
+        self.gpt_sovits = GPTSoVITSONNX(DIR_NAME + "/cache/onnx/gsv3", **npu_kwargs)
 
     def tts(self, text, speed=1.0, language="zh"):
         #t=time()
-        audio = self.gpt_sovits.tts(self.ref_wav_path, self.prompt_text, text, speed=speed, text_language=language)
+        all_audio = []
+        for text_piece in text.split("\n"):
+            if text_piece == "":
+                continue
+            audio = self.gpt_sovits.tts(self.ref_wav_path, self.prompt_text, text_piece, speed=speed, text_language=language)
+            all_audio.append(audio)
+            all_audio.append(np.zeros((2000,)))
         #print(f"tts cost P{time()-t:.3f}s")
-        return audio
+        return np.concatenate(all_audio)
 
 
 class Player():

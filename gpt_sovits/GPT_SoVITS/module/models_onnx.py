@@ -207,7 +207,7 @@ class TextEncoder(nn.Module):
         self.encoder_text = attentions.Encoder(
             hidden_channels, filter_channels, n_heads, n_layers, kernel_size, p_dropout
         )
-        self.text_embedding = nn.Embedding(len(symbols), hidden_channels)
+        self.text_embedding = nn.Embedding(len(symbols.symbols), hidden_channels)
 
         self.mrte = MRTE()
 
@@ -892,7 +892,7 @@ class SynthesizerTrn(nn.Module):
             # self.enc_p.encoder_text.requires_grad_(False)
             # self.enc_p.mrte.requires_grad_(False)
 
-    def forward(self, codes, text, refer):
+    def forward(self, codes, text, refer, noise_scale=0.5):
         refer_mask = torch.ones_like(refer[:1,:1,:])
         ge = self.ref_enc(refer * refer_mask, refer_mask)
 
@@ -905,7 +905,7 @@ class SynthesizerTrn(nn.Module):
             quantized, text, ge
         )
         
-        z_p = m_p + torch.randn_like(m_p) * torch.exp(logs_p)
+        z_p = m_p + torch.randn_like(m_p) * torch.exp(logs_p) * noise_scale
 
         z = self.flow(z_p, y_mask, g=ge, reverse=True)
 

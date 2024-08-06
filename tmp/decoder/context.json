@@ -1,0 +1,2791 @@
+{
+ "metaDef": [
+  {
+   "id": "MATMULINTEGER_h.layers.0.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.0/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.0/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.0/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.0/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.0.self_attn.out_proj.weight_quantized",
+    "h.layers.0.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.0.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "wts_scale": "-2",
+    "out_quant_scale": "1",
+    "nworker": "2",
+    "impl": "v0",
+    "device": "phx",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.0.self_attn.out_proj.weight_quantized(ty3shape512512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5113_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.0/norm1/Add_1_output_0_quantized",
+    "/h/layers.0/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.0/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.0/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5113_quantized",
+    "onnx::MatMul_5113_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_1": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5113_quantized(ty3shape5122048)",
+    "dll_limit": "4",
+    "kernel_n": "2048",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5113_quantized(ty3shape5122048).bin",
+    "wts_scale": "-1",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "quant_mode": "w8a8"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5114_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.0/Relu_output_0_quantized",
+    "/h/layers.0/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.0/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.0/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5114_quantized",
+    "onnx::MatMul_5114_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5114_quantized(ty3shape2048512)",
+    "kernel_n": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5114_quantized(ty3shape2048512).bin",
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "0"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.1.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.1/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.1/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.1/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.1/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.1.self_attn.out_proj.weight_quantized",
+    "h.layers.1.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.1.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.1.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_scale": "-10",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5133_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.1/norm1/Add_1_output_0_quantized",
+    "/h/layers.1/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.1/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.1/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5133_quantized",
+    "onnx::MatMul_5133_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_num": "2",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5133_quantized(ty3shape5122048).bin",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "30",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "device": "phx",
+    "wts_shape_dim_0": "512",
+    "nworker": "2",
+    "wts_shape_dim_1": "2048",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "node_name": "onnxMatMul_5133_quantized(ty3shape5122048)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5134_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.1/Relu_output_0_quantized",
+    "/h/layers.1/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.1/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.1/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5134_quantized",
+    "onnx::MatMul_5134_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "nworker": "2",
+    "wts_shape_dim_0": "2048",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "dll_num": "2",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "node_name": "onnxMatMul_5134_quantized(ty3shape2048512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5134_quantized(ty3shape2048512).bin",
+    "wts_scale": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "quant_mode": "w8a8",
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.2.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.2/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.2/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.2/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.2/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.2.self_attn.out_proj.weight_quantized",
+    "h.layers.2.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_scale": "-46",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "nworker": "2",
+    "device": "phx",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.2.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "node_name": "h.layers.2.self_attn.out_proj.weight_quantized(ty3shape512512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5153_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.2/norm1/Add_1_output_0_quantized",
+    "/h/layers.2/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.2/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.2/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5153_quantized",
+    "onnx::MatMul_5153_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5153_quantized(ty3shape5122048).bin",
+    "wts_shape_dim_0": "512",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-1",
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "onnxMatMul_5153_quantized(ty3shape5122048)",
+    "kernel_n": "2048",
+    "wts_shape_dim_1": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5154_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.2/Relu_output_0_quantized",
+    "/h/layers.2/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.2/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.2/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5154_quantized",
+    "onnx::MatMul_5154_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "dll_num": "2",
+    "kernel_k": "2048",
+    "node_name": "onnxMatMul_5154_quantized(ty3shape2048512)",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5154_quantized(ty3shape2048512).bin",
+    "kernel_m": "1,8,",
+    "wts_scale": "2",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "nworker": "2"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.3.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.3/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.3/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.3/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.3/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.3.self_attn.out_proj.weight_quantized",
+    "h.layers.3.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.3.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.3.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_scale": "4",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5173_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.3/norm1/Add_1_output_0_quantized",
+    "/h/layers.3/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.3/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.3/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5173_quantized",
+    "onnx::MatMul_5173_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "node_name": "onnxMatMul_5173_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5173_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "wts_scale": "-18",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "out_quant_scale": "1",
+    "nworker": "2",
+    "device": "phx",
+    "wts_shape_dim_1": "2048",
+    "wts_shape_dim_0": "512",
+    "kernel_n": "2048",
+    "dll_num": "2",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5174_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.3/Relu_output_0_quantized",
+    "/h/layers.3/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.3/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.3/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5174_quantized",
+    "onnx::MatMul_5174_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5174_quantized(ty3shape2048512).bin",
+    "wts_scale": "1",
+    "quant_mode": "w8a8",
+    "nworker": "2",
+    "device": "phx",
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_n": "2048",
+    "wts_shape_dim_0": "2048",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1",
+    "dll_num": "2",
+    "kernel_k": "2048",
+    "node_name": "onnxMatMul_5174_quantized(ty3shape2048512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.4.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.4/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.4/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.4/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.4/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.4.self_attn.out_proj.weight_quantized",
+    "h.layers.4.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "dll_num": "2",
+    "node_name": "h.layers.4.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.4.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "5",
+    "quant_mode": "w8a8",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "nworker": "2"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5193_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.4/norm1/Add_1_output_0_quantized",
+    "/h/layers.4/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.4/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.4/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5193_quantized",
+    "onnx::MatMul_5193_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_m": "1,8,",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5193_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5193_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "wts_scale": "-18",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "nworker": "2",
+    "wts_shape_dim_1": "2048",
+    "wts_shape_dim_0": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5194_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.4/Relu_output_0_quantized",
+    "/h/layers.4/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.4/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.4/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5194_quantized",
+    "onnx::MatMul_5194_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5194_quantized(ty3shape2048512)",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-11",
+    "nworker": "2",
+    "wts_shape_dim_0": "2048",
+    "kernel_k": "2048",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "device": "phx",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5194_quantized(ty3shape2048512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.5.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.5/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.5/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.5/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.5/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.5.self_attn.out_proj.weight_quantized",
+    "h.layers.5.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-15",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.5.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.5.self_attn.out_proj.weight_quantized(ty3shape512512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5213_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.5/norm1/Add_1_output_0_quantized",
+    "/h/layers.5/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.5/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.5/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5213_quantized",
+    "onnx::MatMul_5213_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5213_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "nworker": "2",
+    "wts_scale": "-14",
+    "device": "phx",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5213_quantized(ty3shape5122048)",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5214_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.5/Relu_output_0_quantized",
+    "/h/layers.5/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.5/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.5/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5214_quantized",
+    "onnx::MatMul_5214_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "nworker": "2",
+    "wts_scale": "-2",
+    "device": "phx",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5214_quantized(ty3shape2048512)",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5214_quantized(ty3shape2048512).bin",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "2048",
+    "quant_mode": "w8a8",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.6.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.6/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.6/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.6/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.6/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.6.self_attn.out_proj.weight_quantized",
+    "h.layers.6.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.6.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_scale": "-23",
+    "wts_shape_dim_0": "512",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.6.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "kernel_n": "2048",
+    "wts_shape_dim_1": "512"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5233_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.6/norm1/Add_1_output_0_quantized",
+    "/h/layers.6/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.6/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.6/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5233_quantized",
+    "onnx::MatMul_5233_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5233_quantized(ty3shape5122048).bin",
+    "wts_scale": "-12",
+    "device": "phx",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5233_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5234_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.6/Relu_output_0_quantized",
+    "/h/layers.6/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.6/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.6/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5234_quantized",
+    "onnx::MatMul_5234_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "quant_mode": "w8a8",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "wts_scale": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5234_quantized(ty3shape2048512).bin",
+    "node_name": "onnxMatMul_5234_quantized(ty3shape2048512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.7.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.7/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.7/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.7/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.7/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.7.self_attn.out_proj.weight_quantized",
+    "h.layers.7.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_k": "2048",
+    "impl": "v0",
+    "out_quant_scale": "1",
+    "device": "phx",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.7.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_shape_dim_0": "512",
+    "nworker": "2",
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.7.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "8"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5253_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.7/norm1/Add_1_output_0_quantized",
+    "/h/layers.7/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.7/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.7/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5253_quantized",
+    "onnx::MatMul_5253_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_scale": "0",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_1": "2048",
+    "wts_shape_dim_0": "512",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5253_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5253_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "kernel_n": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5254_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.7/Relu_output_0_quantized",
+    "/h/layers.7/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.7/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.7/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5254_quantized",
+    "onnx::MatMul_5254_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "wts_scale": "-2",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5254_quantized(ty3shape2048512).bin",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "node_name": "onnxMatMul_5254_quantized(ty3shape2048512)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.8.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.8/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.8/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.8/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.8/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.8.self_attn.out_proj.weight_quantized",
+    "h.layers.8.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_m": "1,8,",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "node_name": "h.layers.8.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.8.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-18",
+    "quant_mode": "w8a8",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "nworker": "2",
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5273_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.8/norm1/Add_1_output_0_quantized",
+    "/h/layers.8/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.8/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.8/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5273_quantized",
+    "onnx::MatMul_5273_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5273_quantized(ty3shape5122048)",
+    "dll_limit": "4",
+    "kernel_n": "2048",
+    "wts_shape_dim_1": "2048",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5273_quantized(ty3shape5122048).bin",
+    "wts_scale": "-49",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5274_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.8/Relu_output_0_quantized",
+    "/h/layers.8/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.8/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.8/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5274_quantized",
+    "onnx::MatMul_5274_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5274_quantized(ty3shape2048512).bin",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_1": "512",
+    "node_name": "onnxMatMul_5274_quantized(ty3shape2048512)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "wts_shape_dim_0": "2048",
+    "wts_scale": "-3",
+    "out_quant_scale": "1",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.9.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.9/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.9/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.9/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.9/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.9.self_attn.out_proj.weight_quantized",
+    "h.layers.9.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "kernel_n": "2048",
+    "node_name": "h.layers.9.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.9.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "quant_mode": "w8a8",
+    "kernel_k": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-6"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5293_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.9/norm1/Add_1_output_0_quantized",
+    "/h/layers.9/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.9/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.9/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5293_quantized",
+    "onnx::MatMul_5293_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "device": "phx",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5293_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5293_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-38",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "nworker": "2",
+    "wts_shape_dim_1": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5294_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.9/Relu_output_0_quantized",
+    "/h/layers.9/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.9/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.9/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5294_quantized",
+    "onnx::MatMul_5294_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5294_quantized(ty3shape2048512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "11",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5294_quantized(ty3shape2048512)",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.10.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.10/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.10/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.10/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.10/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.10.self_attn.out_proj.weight_quantized",
+    "h.layers.10.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_num": "2",
+    "impl": "v0",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.10.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "kernel_k": "2048",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "node_name": "h.layers.10.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "wts_scale": "-52",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5313_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.10/norm1/Add_1_output_0_quantized",
+    "/h/layers.10/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.10/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.10/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5313_quantized",
+    "onnx::MatMul_5313_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "node_name": "onnxMatMul_5313_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5313_quantized(ty3shape5122048).bin",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "wts_scale": "19",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "impl": "v0",
+    "dll_limit": "4",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "wts_shape_dim_1": "2048",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "device": "phx"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5314_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.10/Relu_output_0_quantized",
+    "/h/layers.10/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.10/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.10/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5314_quantized",
+    "onnx::MatMul_5314_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "512",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5314_quantized(ty3shape2048512).bin",
+    "wts_scale": "-17",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5314_quantized(ty3shape2048512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.11.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.11/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.11/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.11/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.11/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.11.self_attn.out_proj.weight_quantized",
+    "h.layers.11.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.11.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "node_name": "h.layers.11.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_limit": "4",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "wts_scale": "-33",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "device": "phx",
+    "impl": "v0"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5333_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.11/norm1/Add_1_output_0_quantized",
+    "/h/layers.11/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.11/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.11/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5333_quantized",
+    "onnx::MatMul_5333_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5333_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5333_quantized(ty3shape5122048).bin",
+    "wts_scale": "3",
+    "nworker": "2",
+    "device": "phx",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "quant_mode": "w8a8"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5334_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.11/Relu_output_0_quantized",
+    "/h/layers.11/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.11/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.11/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5334_quantized",
+    "onnx::MatMul_5334_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_0": "2048",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "wts_shape_dim_1": "512",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5334_quantized(ty3shape2048512)",
+    "kernel_m": "1,8,",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5334_quantized(ty3shape2048512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "nworker": "2",
+    "wts_scale": "9",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.12.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.12/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.12/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.12/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.12/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.12.self_attn.out_proj.weight_quantized",
+    "h.layers.12.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_scale": "29",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "h.layers.12.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.12.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5353_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.12/norm1/Add_1_output_0_quantized",
+    "/h/layers.12/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.12/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.12/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5353_quantized",
+    "onnx::MatMul_5353_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_n": "2048",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5353_quantized(ty3shape5122048).bin",
+    "wts_scale": "-16",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "nworker": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5353_quantized(ty3shape5122048)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5354_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.12/Relu_output_0_quantized",
+    "/h/layers.12/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.12/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.12/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5354_quantized",
+    "onnx::MatMul_5354_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5354_quantized(ty3shape2048512).bin",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_1": "512",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "18",
+    "device": "phx",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5354_quantized(ty3shape2048512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.13.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.13/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.13/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.13/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.13/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.13.self_attn.out_proj.weight_quantized",
+    "h.layers.13.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "512",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.13.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-21",
+    "quant_mode": "w8a8",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "nworker": "2",
+    "kernel_n": "2048",
+    "node_name": "h.layers.13.self_attn.out_proj.weight_quantized(ty3shape512512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5373_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.13/norm1/Add_1_output_0_quantized",
+    "/h/layers.13/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.13/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.13/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5373_quantized",
+    "onnx::MatMul_5373_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "out_quant_scale": "1",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5373_quantized(ty3shape5122048).bin",
+    "nworker": "2",
+    "wts_scale": "-5",
+    "device": "phx",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5373_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "wts_shape_dim_1": "2048",
+    "kernel_n": "2048",
+    "dll_limit": "4"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5374_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.13/Relu_output_0_quantized",
+    "/h/layers.13/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.13/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.13/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5374_quantized",
+    "onnx::MatMul_5374_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "nworker": "2",
+    "kernel_k": "2048",
+    "wts_scale": "46",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5374_quantized(ty3shape2048512).bin",
+    "device": "phx",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5374_quantized(ty3shape2048512)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "kernel_m": "1,8,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.14.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.14/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.14/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.14/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.14/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.14.self_attn.out_proj.weight_quantized",
+    "h.layers.14.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_n": "2048",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "dll_num": "2",
+    "kernel_k": "2048",
+    "node_name": "h.layers.14.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.14.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_scale": "3",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "nworker": "2"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5393_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.14/norm1/Add_1_output_0_quantized",
+    "/h/layers.14/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.14/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.14/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5393_quantized",
+    "onnx::MatMul_5393_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "wts_shape_dim_1": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "kernel_m": "1,8,",
+    "node_name": "onnxMatMul_5393_quantized(ty3shape5122048)",
+    "dll_limit": "4",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5393_quantized(ty3shape5122048).bin",
+    "wts_scale": "-14"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5394_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.14/Relu_output_0_quantized",
+    "/h/layers.14/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.14/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.14/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5394_quantized",
+    "onnx::MatMul_5394_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_num": "2",
+    "kernel_m": "1,8,",
+    "node_name": "onnxMatMul_5394_quantized(ty3shape2048512)",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5394_quantized(ty3shape2048512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "nworker": "2",
+    "wts_scale": "65",
+    "quant_mode": "w8a8",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.15.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.15/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.15/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.15/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.15/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.15.self_attn.out_proj.weight_quantized",
+    "h.layers.15.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "quant_mode": "w8a8",
+    "wts_scale": "-15",
+    "dll_num": "2",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_m": "1,8,",
+    "impl": "v0",
+    "nworker": "2",
+    "kernel_n": "2048",
+    "out_quant_scale": "1",
+    "device": "phx",
+    "wts_shape_dim_0": "512",
+    "wts_shape_dim_1": "512",
+    "node_name": "h.layers.15.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.15.self_attn.out_proj.weight_quantized(ty3shape512512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5413_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.15/norm1/Add_1_output_0_quantized",
+    "/h/layers.15/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.15/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.15/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5413_quantized",
+    "onnx::MatMul_5413_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_limit": "4",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "wts_scale": "-14",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5413_quantized(ty3shape5122048).bin",
+    "dll_num": "2",
+    "wts_shape_dim_1": "2048",
+    "quant_mode": "w8a8",
+    "kernel_m": "1,8,",
+    "node_name": "onnxMatMul_5413_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5414_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.15/Relu_output_0_quantized",
+    "/h/layers.15/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.15/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.15/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5414_quantized",
+    "onnx::MatMul_5414_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "nworker": "2",
+    "wts_scale": "18",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5414_quantized(ty3shape2048512)",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5414_quantized(ty3shape2048512).bin",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_0": "2048",
+    "wts_shape_dim_1": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.16.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.16/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.16/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.16/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.16/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.16.self_attn.out_proj.weight_quantized",
+    "h.layers.16.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_num": "2",
+    "node_name": "h.layers.16.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "kernel_m": "1,8,",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.16.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "nworker": "2",
+    "quant_mode": "w8a8",
+    "wts_scale": "-34",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "device": "phx",
+    "wts_shape_dim_1": "512",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5433_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.16/norm1/Add_1_output_0_quantized",
+    "/h/layers.16/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.16/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.16/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5433_quantized",
+    "onnx::MatMul_5433_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "quant_mode": "w8a8",
+    "node_name": "onnxMatMul_5433_quantized(ty3shape5122048)",
+    "dll_num": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048",
+    "kernel_m": "1,8,",
+    "wts_scale": "0",
+    "kernel_k": "2048",
+    "device": "phx",
+    "nworker": "2",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5433_quantized(ty3shape5122048).bin",
+    "wts_shape_dim_0": "512"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5434_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.16/Relu_output_0_quantized",
+    "/h/layers.16/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.16/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.16/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5434_quantized",
+    "onnx::MatMul_5434_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5434_quantized(ty3shape2048512)",
+    "wts_shape_dim_1": "512",
+    "kernel_n": "2048",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "impl": "v0",
+    "nworker": "2",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5434_quantized(ty3shape2048512).bin",
+    "wts_scale": "17"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.17.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.17/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.17/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.17/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.17/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.17.self_attn.out_proj.weight_quantized",
+    "h.layers.17.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "nworker": "2",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_shape_dim_1": "512",
+    "kernel_n": "2048",
+    "node_name": "h.layers.17.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.17.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "device": "phx",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "dll_limit": "4",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "wts_scale": "24",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5453_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.17/norm1/Add_1_output_0_quantized",
+    "/h/layers.17/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.17/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.17/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5453_quantized",
+    "onnx::MatMul_5453_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5453_quantized(ty3shape5122048).bin",
+    "wts_scale": "-5",
+    "device": "phx",
+    "nworker": "2",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5453_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5454_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.17/Relu_output_0_quantized",
+    "/h/layers.17/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.17/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.17/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5454_quantized",
+    "onnx::MatMul_5454_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "impl": "v0",
+    "dll_limit": "4",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "wts_scale": "-5",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_1": "512",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5454_quantized(ty3shape2048512)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5454_quantized(ty3shape2048512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.18.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.18/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.18/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.18/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.18/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.18.self_attn.out_proj.weight_quantized",
+    "h.layers.18.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_m": "1,8,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.18.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "512",
+    "wts_scale": "-20",
+    "out_quant_scale": "1",
+    "nworker": "2",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_k": "2048",
+    "kernel_n": "2048",
+    "node_name": "h.layers.18.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "impl": "v0"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5473_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.18/norm1/Add_1_output_0_quantized",
+    "/h/layers.18/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.18/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.18/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5473_quantized",
+    "onnx::MatMul_5473_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_scale": "8",
+    "wts_shape_dim_1": "2048",
+    "device": "phx",
+    "nworker": "2",
+    "node_name": "onnxMatMul_5473_quantized(ty3shape5122048)",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5473_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5474_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.18/Relu_output_0_quantized",
+    "/h/layers.18/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.18/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.18/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5474_quantized",
+    "onnx::MatMul_5474_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5474_quantized(ty3shape2048512).bin",
+    "quant_mode": "w8a8",
+    "node_name": "onnxMatMul_5474_quantized(ty3shape2048512)",
+    "dll_num": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_limit": "4",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "wts_scale": "5",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.19.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.19/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.19/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.19/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.19/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.19.self_attn.out_proj.weight_quantized",
+    "h.layers.19.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.19.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "kernel_k": "2048",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "15",
+    "quant_mode": "w8a8",
+    "nworker": "2",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "node_name": "h.layers.19.self_attn.out_proj.weight_quantized(ty3shape512512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5493_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.19/norm1/Add_1_output_0_quantized",
+    "/h/layers.19/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.19/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.19/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5493_quantized",
+    "onnx::MatMul_5493_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "node_name": "onnxMatMul_5493_quantized(ty3shape5122048)",
+    "wts_shape_dim_1": "2048",
+    "kernel_m": "1,8,",
+    "wts_scale": "-15",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5493_quantized(ty3shape5122048).bin",
+    "wts_shape_dim_0": "512",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5494_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.19/Relu_output_0_quantized",
+    "/h/layers.19/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.19/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.19/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5494_quantized",
+    "onnx::MatMul_5494_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_m": "1,8,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5494_quantized(ty3shape2048512).bin",
+    "wts_scale": "5",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_0": "2048",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_k": "2048",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5494_quantized(ty3shape2048512)",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "dll_num": "2",
+    "impl": "v0",
+    "dll_limit": "4"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.20.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.20/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.20/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.20/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.20/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.20.self_attn.out_proj.weight_quantized",
+    "h.layers.20.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "nworker": "2",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.20.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "kernel_n": "2048",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "node_name": "h.layers.20.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "-4"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5513_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.20/norm1/Add_1_output_0_quantized",
+    "/h/layers.20/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.20/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.20/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5513_quantized",
+    "onnx::MatMul_5513_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_scale": "10",
+    "kernel_k": "2048",
+    "device": "phx",
+    "nworker": "2",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5513_quantized(ty3shape5122048).bin",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5513_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_1": "2048",
+    "kernel_m": "1,8,"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5514_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.20/Relu_output_0_quantized",
+    "/h/layers.20/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.20/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.20/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5514_quantized",
+    "onnx::MatMul_5514_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "wts_scale": "7",
+    "wts_shape_dim_1": "512",
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5514_quantized(ty3shape2048512)",
+    "kernel_n": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5514_quantized(ty3shape2048512).bin"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.21.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.21/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.21/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.21/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.21/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.21.self_attn.out_proj.weight_quantized",
+    "h.layers.21.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.21.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "kernel_m": "1,8,",
+    "wts_scale": "59",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "nworker": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "512",
+    "wts_shape_dim_1": "512",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "node_name": "h.layers.21.self_attn.out_proj.weight_quantized(ty3shape512512)"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5533_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.21/norm1/Add_1_output_0_quantized",
+    "/h/layers.21/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.21/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.21/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5533_quantized",
+    "onnx::MatMul_5533_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "node_name": "onnxMatMul_5533_quantized(ty3shape5122048)",
+    "kernel_n": "2048",
+    "wts_shape_dim_1": "2048",
+    "device": "phx",
+    "dll_num": "2",
+    "dll_limit": "4",
+    "impl": "v0",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5533_quantized(ty3shape5122048).bin",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "out_quant_scale": "1",
+    "wts_scale": "-23",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "nworker": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_k": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5534_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.21/Relu_output_0_quantized",
+    "/h/layers.21/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.21/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.21/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5534_quantized",
+    "onnx::MatMul_5534_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_shape_dim_1": "512",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "nworker": "2",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5534_quantized(ty3shape2048512).bin",
+    "kernel_n": "2048",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "wts_shape_dim_0": "2048",
+    "kernel_k": "2048",
+    "out_quant_scale": "1",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "node_name": "onnxMatMul_5534_quantized(ty3shape2048512)",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "17",
+    "dll_num": "2",
+    "dll_limit": "4"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.22.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.22/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.22/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.22/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.22/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.22.self_attn.out_proj.weight_quantized",
+    "h.layers.22.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "impl": "v0",
+    "nworker": "2",
+    "wts_scale": "2",
+    "device": "phx",
+    "dll_num": "2",
+    "node_name": "h.layers.22.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "kernel_n": "2048",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.22.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "out_quant_scale": "1",
+    "quant_mode": "w8a8",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "512",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_1": "512"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5553_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.22/norm1/Add_1_output_0_quantized",
+    "/h/layers.22/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.22/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.22/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5553_quantized",
+    "onnx::MatMul_5553_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "nworker": "2",
+    "out_quant_scale": "1",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_shape_dim_0": "512",
+    "wts_shape_dim_1": "2048",
+    "kernel_k": "2048",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5553_quantized(ty3shape5122048)",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5553_quantized(ty3shape5122048).bin",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_m": "1,8,",
+    "wts_scale": "2",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5554_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.22/Relu_output_0_quantized",
+    "/h/layers.22/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.22/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.22/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5554_quantized",
+    "onnx::MatMul_5554_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "nworker": "2",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_scale": "48",
+    "device": "phx",
+    "dll_num": "2",
+    "kernel_n": "2048",
+    "node_name": "onnxMatMul_5554_quantized(ty3shape2048512)",
+    "kernel_k": "2048",
+    "dll_limit": "4",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5554_quantized(ty3shape2048512).bin",
+    "kernel_m": "1,8,",
+    "wts_shape_dim_0": "2048",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "out_quant_scale": "1",
+    "impl": "v0"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_h.layers.23.self_attn.out_proj.weight_quantized(ty3shape512512)",
+   "inputs": [
+    "/h/layers.23/self_attn/Reshape_9_output_0_quantized",
+    "/h/layers.23/self_attn/Reshape_9_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.23/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.23/self_attn/Gemm_output_0_MatMul_output_quantized"
+   ],
+   "constantInitializers": [
+    "h.layers.23.self_attn.out_proj.weight_quantized",
+    "h.layers.23.self_attn.out_proj.weight_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/h.layers.23.self_attn.out_proj.weight_quantized(ty3shape512512).bin",
+    "dll_num": "2",
+    "quant_mode": "w8a8",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "node_name": "h.layers.23.self_attn.out_proj.weight_quantized(ty3shape512512)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "nworker": "2",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "wts_scale": "-10",
+    "wts_shape_dim_0": "512",
+    "out_quant_scale": "1",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5573_quantized(ty3shape5122048)",
+   "inputs": [
+    "/h/layers.23/norm1/Add_1_output_0_quantized",
+    "/h/layers.23/norm1/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.23/linear1/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.23/linear1/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5573_quantized",
+    "onnx::MatMul_5573_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "impl": "v0",
+    "kernel_m": "1,8,",
+    "out_quant_scale": "1",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5573_quantized(ty3shape5122048).bin",
+    "wts_scale": "-9",
+    "wts_shape_dim_0": "512",
+    "kernel_k": "2048",
+    "quant_mode": "w8a8",
+    "device": "phx",
+    "nworker": "2",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5573_quantized(ty3shape5122048)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "kernel_n": "2048",
+    "dll_limit": "4",
+    "wts_shape_dim_1": "2048"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5574_quantized(ty3shape2048512)",
+   "inputs": [
+    "/h/layers.23/Relu_output_0_quantized",
+    "/h/layers.23/Relu_output_0_zero_point"
+   ],
+   "outputs": [
+    "/h/layers.23/linear2/MatMul_output_0_output_quantized"
+   ],
+   "nodes": [
+    "/h/layers.23/linear2/MatMul_output_0_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5574_quantized",
+    "onnx::MatMul_5574_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "kernel_k": "2048",
+    "nworker": "2",
+    "wts_scale": "19",
+    "out_quant_scale": "1",
+    "wts_shape_dim_0": "2048",
+    "device": "phx",
+    "impl": "v0",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5574_quantized(ty3shape2048512).bin",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5574_quantized(ty3shape2048512)",
+    "wts_shape_dim_1": "512",
+    "kernel_m": "1,8,",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4"
+   }
+  },
+  {
+   "id": "MATMULINTEGER_onnxMatMul_5575_quantized(ty3shape5121025)",
+   "inputs": [
+    "/h/layers.23/norm2/Add_1_output_0_quantized",
+    "/h/layers.23/norm2/Add_1_output_0_zero_point"
+   ],
+   "outputs": [
+    "logits_output_quantized"
+   ],
+   "nodes": [
+    "logits_output_quantized"
+   ],
+   "constantInitializers": [
+    "onnx::MatMul_5575_quantized",
+    "onnx::MatMul_5575_zero_point"
+   ],
+   "device": "MATMULINTEGER",
+   "genericParam": {
+    "wts_scale": "-9",
+    "kernel_k": "2048",
+    "device": "phx",
+    "nworker": "2",
+    "impl": "v0",
+    "out_quant_scale": "1",
+    "kernel_n": "2048",
+    "wts_file": "d:\\workspace\\TTS/tmp\\decoder\\/onnxMatMul_5575_quantized(ty3shape5121025).bin",
+    "wts_shape_dim_0": "512",
+    "quant_mode": "w8a8",
+    "dll_num": "2",
+    "node_name": "onnxMatMul_5575_quantized(ty3shape5121025)",
+    "cache_dir": "d:\\workspace\\TTS/tmp\\decoder\\",
+    "dll_limit": "4",
+    "dll_path": ".\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_1x2048_2048x2048.dll,.\\ryzen-ai\\transformers\\dll\\phx\\qlinear\\libGemmQnnAie_8x2048_2048x2048.dll,",
+    "wts_shape_dim_1": "1025",
+    "kernel_m": "1,8,"
+   }
+  }
+ ],
+ "config": {
+  "passes": [
+   {
+    "name": "init",
+    "plugin": "vaip-pass_init"
+   },
+   {
+    "name": "fuse_GEMM",
+    "plugin": "vaip-pass_py_ext",
+    "disabled": true,
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_GEMM",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_MATMUL",
+    "plugin": "vaip-pass_py_ext",
+    "disabled": true,
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_MATMUL",
+     "methodName": "rules"
+    }
+   },
+   {
+    "name": "fuse_MATMULINTEGER",
+    "plugin": "vaip-pass_py_ext",
+    "pyExt": {
+     "moduleName": "voe.passes.fuse_MATMULINTEGER",
+     "methodName": "rules"
+    }
+   }
+  ],
+  "cacheDir": "d:\\workspace\\TTS/tmp",
+  "cacheKey": "decoder",
+  "version": {
+   "versionInfos": [
+    {
+     "packageName": "vaip",
+     "commit": "989daf46bb8c62e7835ed2a93d5075a58db59349",
+     "version": "vaip.1.0.0"
+    },
+    {
+     "packageName": "target_factory",
+     "commit": "2a29c4509074d1ac8cdae627150fa9f6cb18d36f",
+     "version": "target-factory.3.5.0"
+    },
+    {
+     "packageName": "vart",
+     "commit": "7b44d3c12ac1e0f018d169dc593745ea22e1eda0",
+     "version": "vart"
+    },
+    {
+     "packageName": "xcompiler",
+     "commit": "0d23b257c519cac2cc70c5cbc0ece610c74c4308",
+     "version": "xcompiler.3.5.0"
+    },
+    {
+     "packageName": "onnxrutnime",
+     "commit": "baeece44ba075009c6bfe95891a8c1b3d4571cb3",
+     "version": "onnxruntime.1.15.1"
+    },
+    {
+     "packageName": "xir",
+     "commit": "5885e222d99604084b39e54f6123df01d12c5f7e",
+     "version": "xir.3.5.0"
+    },
+    {
+     "packageName": "xrt",
+     "commit": "a4d3aba39d68550c537a7e7b258d08351f794374",
+     "version": "xrt.2.17.0"
+    },
+    {
+     "packageName": "graph_engine",
+     "commit": "d42034adbc8854cdbd6dc755df5dbe887788c48c",
+     "version": "graph_engine"
+    }
+   ]
+  },
+  "onnxPath": "d:\\workspace\\TTS\\cache\\onnx\\gsv3\\t2s_decoder_quantized.onnx",
+  "sessionOptions": {
+   "config_file": "d:\\workspace\\TTS/ryzen-ai/vaip_config.json",
+   "cacheKey": "decoder",
+   "cacheDir": "d:\\workspace\\TTS/tmp"
+  }
+ }
+}

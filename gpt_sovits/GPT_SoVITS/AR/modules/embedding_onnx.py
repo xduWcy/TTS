@@ -32,7 +32,7 @@ class TokenEmbedding(nn.Module):
         x = self.dropout(x)
         return x
 
-
+# %%
 class SinePositionalEmbedding(nn.Module):
     def __init__(
         self,
@@ -48,16 +48,23 @@ class SinePositionalEmbedding(nn.Module):
         self.dropout = torch.nn.Dropout(p=dropout)
         self.reverse = False
         self.div_term = torch.exp(torch.arange(0, self.embedding_dim, 2) * -(math.log(10000.0) / self.embedding_dim))
+        self.pe = self.extend_pe(2000)
 
-    def extend_pe(self, x):
-        position = torch.cumsum(torch.ones_like(x[:,:,0]), dim=1).transpose(0, 1)
-        scpe = (position * self.div_term).unsqueeze(0)
-        pe = torch.cat([torch.sin(scpe), torch.cos(scpe)]).permute(1, 2, 0)
-        pe = pe.contiguous().view(1, -1, self.embedding_dim)
+    def extend_pe(self, length):
+        position = torch.arange(0, length, dtype=torch.float32).unsqueeze(1)
+        div_term = torch.exp(
+            torch.arange(0, self.embedding_dim, 2, dtype=torch.float32)
+            * -(math.log(10000.0) / self.embedding_dim)
+        )
+        pe = torch.zeros(length, self.embedding_dim)
+        pe[:, 0::2] = torch.sin(position * div_term)
+        pe[:, 1::2] = torch.cos(position * div_term)
+        pe = pe.unsqueeze(0)
         return pe
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        pe = self.extend_pe(x)
-        output = x.unsqueeze(-1) if x.ndim == 2 else x
-        output = output * self.x_scale + self.alpha * pe
+        output = x.unsqueeze(0) if x.ndim == 2 else x
+        output = output * self.x_scale + self.alpha * self.pe[:, :output.shape[1]]
         return self.dropout(output)
+
+# %%
