@@ -13,7 +13,7 @@ from optimum.onnxruntime.configuration import AutoCalibrationConfig, Calibration
 
 from pathlib import Path
 
-base_path = "./cache/onnx/gsv_2"
+base_path = "./cache/onnx/gsv3"
 full_prec_model = "t2s_decoder.onnx"
 inter_model = "t2s_decoder.onnx"
 model_target = "t2s_decoder_quantized.onnx"

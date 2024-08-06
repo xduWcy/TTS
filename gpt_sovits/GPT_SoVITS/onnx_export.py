@@ -216,7 +216,7 @@ class VitsModel(nn.Module):
             self.hps.data.win_length,
             center=False
         )
-        return self.vq_model(pred_semantic, text_seq, refer)[0, 0]
+        return self.vq_model.decode(pred_semantic, text_seq, refer)[0, 0]
 
 
 class GptSoVits(nn.Module):
